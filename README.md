@@ -7,7 +7,7 @@ Programa para Windows que limpa automaticamente a pasta `Temp` dos usuários, em
 1. O usuário executa `WindowsAutoCleaner.exe` e aceita o aviso de administrador (UAC).
 2. O programa copia a si mesmo para `C:\ProgramData\WindowsAutoCleaner\`.
 3. Ele cria uma tarefa no **Agendador de Tarefas** do Windows, rodando como `SYSTEM`.
-4. Por padrão, a tarefa roda **aos domingos às 12:00** e apaga arquivos temporários com **mais de 7 dias**.
+4. Por padrão, a tarefa roda **as segundas às 13:00** e apaga arquivos temporários com **mais de 0 dias**.
 5. Se o computador estiver desligado no horário, a limpeza roda assim que ele for ligado.
 
 Depois de instalado, o executável original pode ser apagado. A tarefa usa a cópia em `ProgramData`.
