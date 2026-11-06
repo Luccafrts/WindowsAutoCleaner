@@ -7,7 +7,7 @@ Programa para Windows que limpa automaticamente a pasta `Temp` dos usuários, em
 1. O usuário executa `WindowsAutoCleaner.exe` e aceita o aviso de administrador (UAC).
 2. O programa copia a si mesmo para `C:\ProgramData\WindowsAutoCleaner\`.
 3. Ele cria uma tarefa no **Agendador de Tarefas** do Windows, rodando como `SYSTEM`.
-4. Por padrão, a tarefa roda **as segundas às 13:00** e apaga arquivos temporários com **mais de 0 dias**.
+4. Por padrão, a tarefa roda **as segundas às 13:00** e apaga arquivos temporários com **de 0 dias ou mais**.
 5. Se o computador estiver desligado no horário, a limpeza roda assim que ele for ligado.
 
 Depois de instalado, o executável original pode ser apagado. A tarefa usa a cópia em `ProgramData`.
@@ -50,9 +50,9 @@ python src\main.py --clean --days 7
 No topo de `src/installer.py`:
 
 ```python
-DEFAULT_DAYS = 7              # idade mínima dos arquivos, em dias
-RUN_TIME = "12:00"            # horário da limpeza
-SCHEDULE_DAYS = ["Sunday"]    # dias da semana; [] = todos os dias
+DEFAULT_DAYS = 0              # idade mínima dos arquivos, em dias
+RUN_TIME = "13:00"            # horário da limpeza
+SCHEDULE_DAYS = ["Monday"]    # dias da semana; [] = todos os dias
 ```
 
 Os dias devem estar em inglês (`Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`). Depois de alterar, gere o executável de novo e reinstale.
