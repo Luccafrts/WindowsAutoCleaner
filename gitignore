@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# PyInstaller (arquivos gerados pelo build.bat)
+build/
+dist/
+*.spec
+
+# Logs
+logs/
+*.log
+
+# Editores / sistema
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
