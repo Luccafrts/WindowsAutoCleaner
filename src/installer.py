@@ -15,7 +15,7 @@ INSTALL_DIR = Path(os.environ.get("ProgramData", r"C:\ProgramData")) / APP_NAME
 INSTALLED_EXE = INSTALL_DIR / f"{APP_NAME}.exe"
 
 DEFAULT_DAYS = 0      # só apaga arquivos com mais de X dias
-RUN_TIME = "13:30"    # horário da limpeza
+RUN_TIME = "13:00"    # horário da limpeza
 
 # Dias da semana em que a limpeza roda (nomes em inglês, como o Windows exige):
 # Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
